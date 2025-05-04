@@ -7,11 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:15
         env:
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
         ports:
           - 5432:5432
         options: >-
@@ -33,6 +36,18 @@ jobs:
         run: |
           cd backend
           pip install -r requirements.txt
+          pip install pytest
 
-      - name: Run tests (placeholder)
-        run: echo "No tests yet!"
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          until pg_isready -h localhost -p 5432; do
+            echo "Waiting for postgres..."
+            sleep 2
+          done
+
+      - name: Run tests
+        env:
+          DATABASE_URI: postgresql://postgres:postgres@localhost:5432/postgres
+        run: |
+          cd backend
+          pytest
