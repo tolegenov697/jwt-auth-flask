@@ -14,5 +14,9 @@ jwt = JWTManager(app)
 
 app.register_blueprint(auth_bp)
 
+@app.route('/')
+def index():
+    return "👋 JWT Auth API is running!", 200
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
+

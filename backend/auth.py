@@ -16,7 +16,7 @@ def register():
         return jsonify({"msg": "User already exists"}), 400
 
     hashed_pw = generate_password_hash(password)
-    new_user = User(username=username, password=hashed_pw)
+    new_user = User(username=username, password_hash=hashed_pw)
     db.session.add(new_user)
     db.session.commit()
 
