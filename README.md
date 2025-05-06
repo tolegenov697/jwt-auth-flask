@@ -53,3 +53,44 @@ Expected response:
 }
 ```
 
+### 🔐 Access Protected Route
+Replace <your-jwt-token> with the token from the login response.
+```bash
+curl -X GET http://localhost:5000/protected \
+  -H "Authorization: Bearer <your-jwt-token>"
+```
+Expected response:
+```bash
+{
+  "logged_in_as": "admin"
+}
+```
+
+### 🧪 Run Tests (if using CI/CD or local testing)
+Inside backend/, you can run:
+```bash
+pytest
+```
+
+### 📦 Project Structure
+```bash
+jwt-auth-app/
+├── backend/
+│   ├── app.py
+│   ├── models.py
+│   ├── auth.py
+│   ├── test_auth.py
+│   └── Dockerfile
+├── db/
+│   └── init.sql
+├── docker-compose.yml
+└── README.md
+```
+
+### ✅ Final Project Criteria
+#### ✔ Dockerized Flask + PostgreSQL
+#### ✔ Connected services (backend ↔ db)
+#### ✔ Auth system (JWT)
+#### ✔ CI/CD ready with test
+#### ✔ Bash command examples
+#### ✔ Bonus: Covers JWT topic not deeply studied in lectures
