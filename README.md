@@ -16,7 +16,7 @@ A simple Flask API with user registration, login, and JWT-protected routes. Powe
 ### Step 1: Clone the repo
 
 ```bash
-git clone https://github.com/your-username/jwt-auth-app.git
+git clone https://github.com/tolegenov697/jwt-auth-app.git
 cd jwt-auth-app
 ```
 ### Step 2: Start services
