@@ -41,7 +41,6 @@ Expected response:
 ### 🔑 Login to Get JWT Token
 ```bash
 curl -X POST http://localhost:5000/login -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"1234\"}"
-
 ```
 Expected response:
 ```bash
