@@ -28,10 +28,8 @@ API will be available at: http://localhost:5000
 
 ### ➕ Register a User
 
-```bash
-curl -X POST http://localhost:5000/register \
-  -H "Content-Type: application/json" \
-  -d '{"username":"admin", "password":"1234"}'
+```bash 
+curl -X POST http://localhost:5000/register -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"1234\"}"
 ```
 
 Expected response:
@@ -42,9 +40,8 @@ Expected response:
 
 ### 🔑 Login to Get JWT Token
 ```bash
-curl -X POST http://localhost:5000/login \
-  -H "Content-Type: application/json" \
-  -d '{"username":"admin", "password":"1234"}'
+curl -X POST http://localhost:5000/login -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"1234\"}"
+
 ```
 Expected response:
 ```bash
@@ -56,8 +53,7 @@ Expected response:
 ### 🔐 Access Protected Route
 Replace <your-jwt-token> with the token from the login response.
 ```bash
-curl -X GET http://localhost:5000/protected \
-  -H "Authorization: Bearer <your-jwt-token>"
+curl -X GET http://localhost:5000/protected -H "Authorization: Bearer <your-jwt-token>"
 ```
 Expected response:
 ```bash
