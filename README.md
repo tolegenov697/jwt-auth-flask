@@ -64,9 +64,7 @@ Expected response:
 ### 🧪 Run Tests (if using CI/CD or local testing)
 Inside backend/, you can run:
 ```bash
-set DATABASE_URI=postgresql://postgres:postgres@localhost:5432/postgres
 pytest
-
 ```
 Expected response:
 ```bash
