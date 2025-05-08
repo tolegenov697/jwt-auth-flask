@@ -12,9 +12,8 @@ A simple Flask API with user registration, login, and JWT-protected routes. Powe
 - Ready for CI/CD and testing
 
 ## 🐳 Run with Docker
-
+WINDOWS
 ### Step 1: Clone the repo
-
 ```bash
 git clone https://github.com/tolegenov697/jwt-auth-flask.git
 cd jwt-auth-flask
@@ -27,7 +26,6 @@ API will be available at: http://localhost:5000
 
 
 ### ➕ Register a User
-
 ```bash 
 curl -X POST http://localhost:5000/register -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"1234\"}"
 ```
