@@ -69,7 +69,18 @@ set DATABASE_URI=postgresql://postgres:postgres@localhost:5432/postgres
 pytest
 
 ```
+Expected response:
+```bash
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.9, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\{...}\jwt-auth-flask\backend
+plugins: anyio-4.6.2.post1
+collected 1 item
 
+test_auth.py .                                                                                                   [100%]
+
+================================================== 1 passed in 1.09s ==================================================
+```
 ### 📦 Project Structure
 ```bash
 jwt-auth-flask/
